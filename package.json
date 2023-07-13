@@ -1,0 +1,21 @@
+{
+  "name": "html_element_extractor",
+  "author": "Maximilian Schlipf <maximilian.schlipf@gmail.com>",
+  "version": "1.0.0",
+  "description": "Export HTML elements and certain attributes to CSV or JSON.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bash build.sh",
+    "dev": "bash build.sh --no-optimize --no-source-maps --no-cache"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.241",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "parcel": "^2.9.3",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}

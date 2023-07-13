@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "HTML Element Extractor",
+  "version": "1.0",
+  "description": "Extracts HTML element attributes",
+  "permissions": ["activeTab", "downloads"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "Reload extension": {
+      "suggested_key": {
+        "default": "Ctrl+M",
+        "mac": "Command+M"
+      },
+      "description": "Reload the extension"
+    }
+  }
+}

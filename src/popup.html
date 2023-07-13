@@ -1,0 +1,50 @@
+<!doctype html>
+<html style="width: 400px">
+  <head>
+    <title>HTML Element Attribute Extractor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="popup.ts"></script>
+  </head>
+  <body class="m-5">
+    <h1 class="text-2xl">HTML Element Attribute Extractor</h1>
+    <form class="w-full my-5 text-lg flex flex-wrap gap-4">
+      <div class="w-full" id="input-type-container-1">
+        <label for="input-type" class="block text-sm">Input type</label>
+        <select name="input-type" id="input-type-1" class="block underline focus:outline-none focus:no-underline">
+          <option value="" selected disabled hidden>Choose input type</option>
+          <option value="text">Text</option>
+          <option value="radio">Radio</option>
+          <option value="checkbox">Checkbox</option>
+          <option value="textarea">Textarea</option>
+          <option value="select">Select</option>
+          <option value="button">Button</option>
+          <option value="file">File</option>
+        </select>
+      </div>
+      <div class="w-full" id="attribute-container">
+        <label for="attribute" class="block text-sm">HTML Attribute</label>
+        <input
+          type="text"
+          id="attribute"
+          placeholder="e.g. id"
+          class="block focus:outline-none underline focus:no-underline transition duration-200 ease-out"
+        />
+      </div>
+      <div class="w-full" id="button-container">
+        <button
+          id="addButton"
+          class="px-2 border border-solid border-black rounded-sm hover:bg-black hover:text-white transition-colors duration-200 ease-out"
+        >
+          Add input type
+        </button>
+        <button
+          id="startButton"
+          class="px-2 border border-solid border-black rounded-sm hover:bg-black hover:text-white transition-colors duration-200 ease-out"
+        >
+          Start
+        </button>
+      </div>
+    </form>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
+</html>

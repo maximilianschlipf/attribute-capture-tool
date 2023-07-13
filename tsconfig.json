@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "chrome",
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "src/*.ts"
+  ]
+}
