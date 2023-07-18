@@ -36,7 +36,7 @@ const extract = (types, attributeValue) => {
 };
 
 const addInput = e => {
-  e.preventDefault();
+  e.preventDefault()
 
   const typeContainer = document.getElementById('input-type-container-1');
   const attributeContainer = document.getElementById('attribute-container');
@@ -45,8 +45,32 @@ const addInput = e => {
 
   // Clone type container and insert before attribute container
   let clone = typeContainer.cloneNode(true) as HTMLElement;
-  clone.setAttribute('id', `ìnput-type-container-${typeSelectNum}`);
+  clone.setAttribute('id', `input-type-container-${typeSelectNum}`);
   (clone.childNodes[3] as HTMLElement).setAttribute('id', `input-type-${typeSelectNum}`);
+
+  // Create remove button
+  const removeButton = document.createElement('button');
+  removeButton.classList.add('inline-block');
+  removeButton.setAttribute('id', `remove-input-type-container-${typeSelectNum}`)
+
+  // Add event listener to button
+  removeButton.addEventListener('click', (e) => removeInput(e))
+
+  // Add image to button
+  const buttonImage = document.createElement('img');
+  buttonImage.setAttribute('src', './assets/recycle-bin.png');
+  removeButton.appendChild(buttonImage);
+
+  clone.appendChild(removeButton);
 
   attributeContainer.before(clone);
 };
+
+const removeInput = e => {
+  e.preventDefault()
+
+  const buttonId = e.currentTarget.getAttribute('id')
+  const inputContainer = document.getElementById(buttonId.slice(7))
+
+  inputContainer.remove()
+}

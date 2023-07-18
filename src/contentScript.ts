@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(function (request) {
 
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
-      console.log('Element ' + element)
+      console.log('Element ' + element);
       const attributeValue = element.getAttribute(attribute);
       const elementType = element.tagName;
 

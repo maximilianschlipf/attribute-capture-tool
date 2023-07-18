@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "HTML Element Extractor",
+  "name": "HTML Attribute Capture Tool",
   "version": "1.0",
-  "description": "Extracts HTML element attributes",
+  "description": "Captures HTML element attributes and exports them to JSON or CSV",
   "permissions": ["activeTab", "downloads"],
   "action": {
     "default_popup": "popup.html"
